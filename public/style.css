@@ -1,0 +1,40 @@
+body {
+  color: rgb(226, 226, 226);
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+}
+
+.book {
+  margin: 10vh 25vw;
+}
+
+.booktitle {
+  color: white;
+}
+
+.bookcover {
+  width: 10vw;
+  display: inline-block;
+  margin-left: 15px;
+  max-width: 150px;
+}
+
+.bookdescription {
+  display: flex;
+  align-items: center;
+}
+
+.fullcover {
+  display: block;
+  width: 20vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fulldescription {
+  margin: 5vh 15vw;
+  text-align: justify;
+}
