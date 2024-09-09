@@ -4,28 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>% Book Name %</title>
+    <title><%= book.name %></title>
   </head>
   <body>
-    <h1 class="fulltitle">Book Name</h1>
-    <img src="/public/a.jpg" alt="book cover" class="fullcover" />
-    <p class="fulldescription">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat dolore
-      voluptates est tenetur! Veritatis minima culpa eligendi earum laborum
-      aliquam, excepturi eius aliquid itaque quos, architecto nesciunt mollitia
-      officia quisquam? Tempora nesciunt non veniam labore, dolorum velit neque
-      placeat soluta repellendus inventore? Quisquam libero officiis provident
-      earum? Officiis dicta quisquam perferendis esse temporibus ab repudiandae,
-      dolorum, similique omnis quia qui? Architecto qui voluptatum impedit.
-      Velit, exercitationem aperiam! Dolore, modi commodi! Voluptas, explicabo
-      fugiat tenetur laborum delectus quibusdam dolorem quae perspiciatis sit
-      vel id, sint fugit ex porro, rerum consectetur consequuntur! Nisi sint
-      iusto tempora sed veniam animi debitis accusamus, modi repellat
-      consectetur aliquid unde harum molestias, facilis eos labore libero. Quod
-      doloremque magnam facilis qui cupiditate aliquid ab neque modi? Laborum
-      quibusdam repudiandae, beatae aliquid unde error quisquam ipsam optio
-      accusantium, est cumque nostrum et quo at veritatis a ut voluptates nam
-      quam, adipisci magni aperiam. Eius itaque voluptate natus?
-    </p>
+    <h1 class="fulltitle"><%= book.name %></h1>
+    <img src="a.jpg" alt="book cover" class="fullcover" />
+    <p class="fulldescription"><%= book.l_desc %></p>
   </body>
 </html>

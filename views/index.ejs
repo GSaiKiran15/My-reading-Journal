@@ -9,14 +9,53 @@
   <body>
     <h1>My Reading Journal</h1>
     <% book.forEach(element => { %>
-    <div class="book">
-      <h2 class="booktitle"><a href="/full"><%= element.name %></a></h2>
-      <p class="stats">Date read : <%= element.date_read %></p>
-      <p class="bookdescription">
-        <%= element.s_desc %>
-        <img src="a.jpg" alt="book cover" class="bookcover" />
-      </p>
-    </div>
+    <form action="/full" method="post">
+      <div class="book">
+        <input
+          type="hidden"
+          name="clickID"
+          value="<%= parseInt(element.id) %>"
+        />
+        <h2 class="booktitle"><%= element.name %></h2>
+        <p class="stats">Date read : <%= element.date_read %></p>
+        <p class="bookdescription">
+          <%= element.s_desc %>
+          <img src="a.jpg" alt="book cover" class="bookcover" />
+        </p>
+        <button type="submit">View Full Review</button>
+      </div>
+    </form>
+
     <% }); %>
+    <!-- <script>
+      const bookDivs = document.querySelectorAll(".book");
+
+      // Add a click event listener to each div
+      bookDivs.forEach((div) => {
+        div.addEventListener("click", function () {
+          // Fetch data from the div's data attributes
+          const id = this.getAttribute("clickID");
+          // Create the postData object
+          const postData = {
+            id: id,
+          };
+
+          fetch("/full", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(postData), // Send the data as JSON
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Success:", data);
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+        });
+      });
+    </script> -->
   </body>
 </html>
