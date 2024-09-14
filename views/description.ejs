@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="gsk.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <title><%= book.name %></title>
   </head>
   <body>
     <h1 class="fulltitle"><%= book.name %></h1>
-    <img src="a.jpg" alt="book cover" class="fullcover" />
+    <img
+      src="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-M.jpg"
+      alt="book cover"
+      class="fullcover"
+    />
     <p class="fulldescription"><%= book.l_desc %></p>
   </body>
 </html>

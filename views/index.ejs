@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="gsk.png" type="image/x-icon" />
     <title>My Reading Journal</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -20,7 +21,11 @@
         <p class="stats">Date read : <%= element.date_read %></p>
         <p class="bookdescription">
           <%= element.s_desc %>
-          <img src="a.jpg" alt="book cover" class="bookcover" />
+          <img
+            src="https://covers.openlibrary.org/b/isbn/<%= element.isbn %>-M.jpg"
+            alt="book cover"
+            class="bookcover"
+          />
         </p>
         <button type="submit">View Full Review</button>
       </div>
